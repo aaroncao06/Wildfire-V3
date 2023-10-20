@@ -27,7 +27,7 @@ Transformer utilized in the paper "Mesogeos: A multi-purpose dataset for data-dr
 - basic transformer encoder that performed well in previous research
 
 FINDINGS:
-ConvTran performed the best, achieving an f1 score of 0.7042136921565159 /
+ConvTran performed the best, achieving an f1 score of 0.7042136921565159 //
 ConvTran+spatial convolution was second, with an f1 of 0.6306645118473377 /
 Mesogeos Transformer encoder got f1 of 0.6048925467730613 /
 Random forest was worst with an f1 of 0.4747256177105379 /
