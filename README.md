@@ -20,17 +20,17 @@ Deep Learning:
 - Implemented transformer with novel improvements specifically designed for time-series multivariate classification tasks
 - Utilizes convolutions to aid in more efficient and effective embedding of the data
 - Takes past 64 timesteps for one pixel at a time, no spatial context
-Convolutional Transformer
+ConvTran + Spatial Convolution input layer:
 - novel addition adding a convolutional layer to the input of the transformer to encode spatial context
-- takes data from each neighboring pixel
+- looks at data from each neighboring pixel and back 64 timesteps as well
 Transformer utilized in the paper "Mesogeos: A multi-purpose dataset for data-driven wildfire modeling in the Mediterranean" https://arxiv.org/pdf/2306.05144.pdf
 - basic transformer encoder that performed well in previous research
 
 FINDINGS:
-ConvTran performed the best, achieving an f1 score of 0.7042136921565159 //
-ConvTran+spatial convolution was second, with an f1 of 0.6306645118473377 /
-Mesogeos Transformer encoder got f1 of 0.6048925467730613 /
-Random forest was worst with an f1 of 0.4747256177105379 /
+- ConvTran performed the best, achieving an f1 score of 0.7042136921565159 
+- ConvTran+spatial convolution was second, with an f1 of 0.6306645118473377 
+- Mesogeos Transformer encoder got f1 of 0.6048925467730613
+- Random forest was worst with an f1 of 0.4747256177105379 
 
 These metrics demonstrate the potential that deep learning has for applications in the field of wildfire predicting. 
 The ConvTran model specialized for time-series problems like this one achieved an impressive f1 score despite the low quality of the data.
