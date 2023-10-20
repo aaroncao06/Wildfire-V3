@@ -2,7 +2,7 @@ This is the third iteration of my project on wildfire prediction with machine le
 The files are my Kaggle notebooks.
 
 PROBLEM:
-Here, I treat wildfire prediction as a binary classification task, classifying a future timestep for each pixel in a satellite image as either "yes fire" or "no fire." The degree of certainty can be interpreted as wildfire risk.
+In this project, I approach wildfire prediction as a binary classification task, classifying a future timestep for each pixel in a satellite image as either "yes fire" or "no fire." The degree of certainty can be interpreted as wildfire risk.
 
 DATA:
 I used the Seasfire Datacube introduced in the "Deep Learning for Global Wildfire Forecasting" paper here: https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2022/52/paper.pdf
@@ -12,7 +12,6 @@ For this specific project due to memory restrictions, I only used a 10 deg x 10 
 Due to the infrequent and stochastic nature of wildfires, I roughly followed the sampling procedure used in "Wildfire Danger Prediction and Understanding With Deep Learning" https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL099368 by sampling two negatives cases for every positive.
 
 MODELS:
-Traditional:
 Random Forest: 
 - Take in time-series of the past 64 timesteps to predict yes or no fire
 
@@ -28,10 +27,10 @@ Transformer utilized in the paper "Mesogeos: A multi-purpose dataset for data-dr
 - basic transformer encoder that performed well in previous research
 
 FINDINGS:
-ConvTran performed the best, achieving an f1 score of 0.7042136921565159
-ConvTran+spatial convolution was second, with an f1 of 0.6306645118473377
-Mesogeos Transformer encoder got f1 of 0.6048925467730613
-Random forest was worst with an f1 of 0.4747256177105379
+ConvTran performed the best, achieving an f1 score of 0.7042136921565159 /
+ConvTran+spatial convolution was second, with an f1 of 0.6306645118473377 /
+Mesogeos Transformer encoder got f1 of 0.6048925467730613 /
+Random forest was worst with an f1 of 0.4747256177105379 /
 
 These metrics demonstrate the potential that deep learning has for applications in the field of wildfire predicting. 
 The ConvTran model specialized for time-series problems like this one achieved an impressive f1 score despite the low quality of the data.
