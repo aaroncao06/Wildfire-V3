@@ -12,18 +12,20 @@ For this specific project due to memory restrictions, I only used a 10 deg x 10 
 Due to the infrequent and stochastic nature of wildfires, I roughly followed the sampling procedure used in "Wildfire Danger Prediction and Understanding With Deep Learning" https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL099368 by sampling two negatives cases for every positive.
 
 MODELS:
-Random Forest: 
+Random Forest: (wildfire rf notebook)
 - Take in time-series of the past 64 timesteps to predict yes or no fire
 
 Deep Learning:
-"ConvTran" Transformer described in "Improving position encoding of transformers for multivariate time series classification" https://link.springer.com/article/10.1007/s10618-023-00948-2
+"ConvTran" Transformer described in "Improving position encoding of transformers for multivariate time series classification" https://link.springer.com/article/10.1007/s10618-023-00948-2 (wildfire v3 notebook)
 - Implemented transformer with novel improvements specifically designed for time-series multivariate classification tasks
 - Utilizes convolutions to aid in more efficient and effective embedding of the data
 - Takes past 64 timesteps for one pixel at a time, no spatial context
-ConvTran + Spatial Convolution input layer:
+
+ConvTran + Spatial Convolution input layer: (wildfire v4 notebook)
 - novel addition adding a convolutional layer to the input of the transformer to encode spatial context
 - looks at data from each neighboring pixel and back 64 timesteps as well
-Transformer utilized in the paper "Mesogeos: A multi-purpose dataset for data-driven wildfire modeling in the Mediterranean" https://arxiv.org/pdf/2306.05144.pdf
+- 
+Transformer utilized in the paper "Mesogeos: A multi-purpose dataset for data-driven wildfire modeling in the Mediterranean" https://arxiv.org/pdf/2306.05144.pdf (wildfire v3 notebook)
 - basic transformer encoder that performed well in previous research
 
 FINDINGS:
